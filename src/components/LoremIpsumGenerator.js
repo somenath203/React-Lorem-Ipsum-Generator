@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useToasts } from 'react-toast-notifications';
+import { v4 as uuidv4 } from 'uuid';
 import Tippy from '@tippyjs/react';
 
 import data from './../data';
@@ -95,7 +96,9 @@ const LoremIpsumGenerator = () => {
                     onClick={copyToClipboard}
                 >
                     {dispLoremText.map((data) => (
-                        <p>{data}</p>
+                        <div key={uuidv4()}>
+                            <p>{data}</p>
+                        </div>
                     ))}
                 </div>
             </Tippy>}
