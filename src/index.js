@@ -8,7 +8,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ToastProvider autoDismissTimeout={5000} placement='bottom-center'>
+  <ToastProvider autoDismissTimeout={3000} placement='bottom-center'>
     <App />
   </ToastProvider>
 );
